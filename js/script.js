@@ -63,6 +63,7 @@ let rabbit2 = new Rabbit2();
 console.log( rabbit instanceof Rabbit2 ); // true
 */
 
+/*
 class Rabbit{}
 
 //a
@@ -75,4 +76,24 @@ Object.prototype.toString.call(new Rabbit())// "[object Object]"
 var s = {}.toString;
 s.call(new Rabbit())//"[object Object]"
 //d
-console.log(Object.prototype.toString.call(new Rabbit()) === {}.toString.call(new Rabbit())) // returns true
+console.log(Object.prototype.toString.call(new Rabbit()) === {}.toString.call(new Rabbit())) // returns true*/
+
+
+/*
+try{
+    s.call(new Rabbit())//"[object Object]"
+}
+catch (err)
+{
+    console.log(err)
+}
+window.onerror = function(message, url, line, col, error) {
+    alert(`${message}\n At ${line}:${col} of ${url}`);
+};
+
+function readData() {
+    badFunc(); // Whoops, something went wrong!
+}
+
+readData();
+*/
