@@ -98,6 +98,7 @@ function readData() {
 readData();
 */
 
+/*
 class FormatError extends SyntaxError {
     constructor(message) {
         super(message);
@@ -111,4 +112,34 @@ console.log( err.message ); // ошибка форматирования
 console.log( err.name ); // FormatError
 console.log( err.stack ); // stack
 
-console.log( err instanceof SyntaxError ); // true
+console.log( err instanceof SyntaxError ); // true*/
+
+/*function sayHi() {
+    alert("Hello");
+}
+
+// global functions are methods of the global object:
+window.sayHi();*/
+/*
+
+setTimeout(() =>  document.body.style.background = "red", 1000)
+{
+    document.body.style.background = "red"
+
+
+    setTimeout(() => document.body.style.background = "blue", 1000);
+    document.body.style.background = "green"
+
+}
+*/
+/*
+const draw = (table, color) => {
+    const count = table.rows.length
+    const trows = table.rows
+
+    for (let i = 0; i < count; i++) {
+        trows[i].children[i].style.backgroundColor = color
+    }
+}
+
+draw(document.body.firstElementChild, 'red')*/
