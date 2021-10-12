@@ -173,3 +173,10 @@ let tav = document.querySelectorAll('#age-table label')
 for (let elem of tav) {
     console.log(elem.innerHTML); // "test", "passed"
 }*/
+
+
+let div = document.createElement("div")
+let p = document.createElement("pipi")
+div.append(p)
+
+console.log(div.childNodes)
