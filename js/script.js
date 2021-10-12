@@ -143,3 +143,33 @@ const draw = (table, color) => {
 }
 
 draw(document.body.firstElementChild, 'red')*/
+/*for (let elem of document.body.children) {
+    if (elem.matches('a[href$="file.zip"]')) {
+        console.log("The archive reference: " + elem.href);
+    }
+}*/
+/*
+let coll = document.querySelectorAll("div");
+for (let i = 0, len = coll.length; i < len; i++) {
+    if (coll[i].matches(".someClass")) {
+        console.log(coll[i].id +": Я выжил!");
+    }else{
+        coll[i].remove();
+    }
+}
+console.log(coll)
+*/
+/*
+
+let inputs = table.getElementsByTagName('input');
+
+for (let input of inputs) {
+    alert( input.value + ': ' + input.checked );
+}*/
+/*
+
+let tav = document.querySelectorAll('#age-table label')
+
+for (let elem of tav) {
+    console.log(elem.innerHTML); // "test", "passed"
+}*/
