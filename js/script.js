@@ -174,9 +174,23 @@ for (let elem of tav) {
     console.log(elem.innerHTML); // "test", "passed"
 }*/
 
+/*
 
 let div = document.createElement("div")
 let p = document.createElement("pipi")
 div.append(p)
 
-console.log(div.childNodes)
+console.log(div.childNodes)*/
+
+/*
+let i = document.querySelector('.bebra')
+console.log(i.innerHTML)
+
+console.log(i.innerHTML = "Hi, Ben")*/
+function add (a)
+{
+    return function (b)
+    {
+        return a + b
+    }
+}
