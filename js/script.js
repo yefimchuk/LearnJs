@@ -186,11 +186,50 @@ console.log(div.childNodes)*/
 let i = document.querySelector('.bebra')
 console.log(i.innerHTML)
 
-console.log(i.innerHTML = "Hi, Ben")*/
+console.log(i.innerHTML = "Hi, Ben")*//*
 function add (a)
 {
     return function (b)
     {
         return a + b
     }
+}*/
+   /* new Promise((resolve, reject) => {
+    setTimeout(() => reject("hello"), 2000)
+})*/
+
+    /*.then(error => console.log(error),*/
+/*
+    result => console.log(result)); */
+
+/*
+function delay(ms) {
+    return new Promise (resolve => setTimeout(resolve,ms) )
 }
+delay(3000).then(() => console.log('runs after 3 seconds'));
+ */
+
+/*
+console.log("Request data...")
+let p = new Promise((resolve, reject) => {
+    setTimeout(()=>{
+        console.log("Preparing data")
+        let Student = {
+            age: 10,
+            course: 3,
+            university: "NAU"
+        }
+        resolve(Student)
+    },4000)
+
+})
+p.then(newStud => {
+    console.log(newStud)
+    return new Promise((resolve, reject) =>
+    {
+        setTimeout(() => {
+            newStud.friends = 10;
+        }, 6000)
+        resolve(newStud)
+    })
+}).then((mod) => console.log(mod))*/
