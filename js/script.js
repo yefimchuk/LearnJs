@@ -233,5 +233,8 @@ p.then(newStud => {
         resolve(newStud)
     })
 }).then((mod) => console.log(mod))*/
-/*
-Xxldl*/
+
+
+let img = document.getElementById("m")
+
+img.classList.add('growing');
