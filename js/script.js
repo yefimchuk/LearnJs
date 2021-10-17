@@ -234,7 +234,16 @@ p.then(newStud => {
     })
 }).then((mod) => console.log(mod))*/
 
+let img = document.querySelector('.img');
+img.addEventListener("click", addClass )
+function addClass () {
+    img.classList.add("growing")
+    img.removeEventListener("click", addClass)
+    img.addEventListener('transitionend', addAlert);
 
-let img = document.getElementById("m")
+}
 
-img.classList.add('growing');
+function addAlert(){
+alert("Done")
+    img.removeEventListener("transitionend", addAlert)
+}
