@@ -234,16 +234,30 @@ p.then(newStud => {
     })
 }).then((mod) => console.log(mod))*/
 
+/*
 let img = document.querySelector('.img');
 img.addEventListener("click", addClass )
-function addClass () {
-    img.classList.add("growing")
-    img.removeEventListener("click", addClass)
-    img.addEventListener('transitionend', addAlert);
 
+function addClass () {
+
+     img.classList.add("growing")
+    let a = img
+    img.addEventListener('transitionend', () => {
+        addBack(a)
+    });
+
+
+}
+function addBack(a){
+    console.log("img", a)
+img.classList.remove("growing")
+        img.classList.add("growingBack")
+    a.addEventListener('transitionend', addAlert);
 }
 
 function addAlert(){
-alert("Done")
+
+console.log("Done")
     img.removeEventListener("transitionend", addAlert)
-}
+
+}*/
