@@ -261,3 +261,51 @@ console.log("Done")
     img.removeEventListener("transitionend", addAlert)
 
 }*/
+/*
+
+let button = document.createElement("BUTTON");
+button.innerText = "showCircle(150, 150, 100)"
+document.body.appendChild(button)
+document.body.style.background = "white"
+button.style.border = "1px solid black"
+button.style.width = "200px"
+button.onclick = function (){
+    showCircle(150,150,100)
+}
+let div = document.createElement("div")
+document.body.appendChild(div)
+div.classList.add("cx")
+div.classList.add("cy")
+div.classList.add("radius")
+
+div.style.transitionDuration = "2s";
+let wight = document.querySelector(".cx")
+let height = document.querySelector(".cy")
+let radiusCircle = document.querySelector(".radius")
+wight.style.width = "0px"
+height.style.height = "0px"
+radiusCircle.style.borderRadius = "100px"
+function showCircle(cx, cy, radius)
+{
+    div.style.background = "red"
+    div.style.margin = "20px"
+
+wight.style.width = `${cx}px`;
+    height.style.height = `${cy}px`;
+    radiusCircle.style.borderRadius = `${radius}px`;
+}
+*/
+
+let circle = document.querySelector(".circle")
+let button = document.querySelector(".button")
+button.addEventListener("click", clickHandler)
+function clickHandler(){
+    button.removeEventListener("click", clickHandler)
+    showCircle(150,150,100)
+}
+function showCircle(cx, cy, radius) {
+    circle.style.left = cx + "px"
+    circle.style.top = cy + "px"
+    circle.style.width = radius * 2 + "px"
+    circle.style.height = radius * 2 + "px"
+}
