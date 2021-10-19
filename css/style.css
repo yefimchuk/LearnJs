@@ -109,14 +109,17 @@ td {
 	width: 0;
 	height: 0;
 }*/
-.circle
-{
-	transition-property: width,height,left,top;
-	transition-duration: 3s;
-	transform: translateX(-75%) translateY(-50%);
-	background: red;
-	position: relative;
-	border-radius: 100px;
-	width: 0px;
-	height: 0px;
+.text {
+	font-size: 20px;
+	line-height: 200px;
+	text-align: center;
+	color: black;
+}
+.circle {
+	transition-property: width, height, margin-left, margin-top;
+	transition-duration: 2s;
+	position: fixed;
+	transform: translateX(-35%) translateY(-30%);
+	background-color: red;
+	border-radius: 50%;
 }

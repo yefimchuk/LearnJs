@@ -194,11 +194,11 @@ function add (a)
         return a + b
     }
 }*/
-   /* new Promise((resolve, reject) => {
-    setTimeout(() => reject("hello"), 2000)
+/* new Promise((resolve, reject) => {
+ setTimeout(() => reject("hello"), 2000)
 })*/
 
-    /*.then(error => console.log(error),*/
+/*.then(error => console.log(error),*/
 /*
     result => console.log(result)); */
 
@@ -296,6 +296,7 @@ wight.style.width = `${cx}px`;
 }
 */
 
+/*
 let circle = document.querySelector(".circle")
 let button = document.querySelector(".button")
 button.addEventListener("click", clickHandler)
@@ -308,4 +309,31 @@ function showCircle(cx, cy, radius) {
     circle.style.top = cy + "px"
     circle.style.width = radius * 2 + "px"
     circle.style.height = radius * 2 + "px"
+}*/
+
+function go() {
+    showCircle(150, 150, 100, div => {
+        div.classList.add('text');
+        div.append("Hello, world!");
+    });
+}
+
+function showCircle(cx, cy, radius, callback) {
+    let div = document.createElement('div');
+    div.style.width = 0;
+    div.style.height = 0;
+    div.style.left = cx + 'px';
+    div.style.top = cy + 'px';
+    div.className = 'circle';
+    document.body.append(div);
+
+    setTimeout(() => {
+        div.style.width = radius * 2 + 'px';
+        div.style.height = radius * 2 + 'px';
+
+        div.addEventListener('transitionend', function handler() {
+            div.removeEventListener('transitionend', handler);
+            callback(div);
+        });
+    }, 0);
 }
