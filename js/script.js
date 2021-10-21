@@ -311,6 +311,7 @@ function showCircle(cx, cy, radius) {
     circle.style.height = radius * 2 + "px"
 }*/
 
+/*
 function go() {
     showCircle(150, 150, 100, div => {
         div.classList.add('text');
@@ -337,3 +338,90 @@ function showCircle(cx, cy, radius, callback) {
         });
     }, 0);
 }
+*/
+/*
+let start = Date.now(); // remember start time
+let timer = setInterval(()=> {
+    let timePassed = Date.now() - start;
+    console.log(timePassed)
+    if (timePassed => 2000)
+    {
+        clearInterval(timer)
+    }
+    }
+,2000)*/
+/*
+let prev = performance.now();
+console.log(prev)
+setInterval(()=> console.log(performance.now()), 10000)*/
+
+/*
+let prev = performance.now();
+let times = 0;
+
+requestAnimationFrame(function measureddd(faf) {
+
+
+    if (times++ < 10) requestAnimationFrame(measure);
+})
+*/
+let path = document.querySelector("#path")
+
+let brick = document.querySelector("#brick")
+/*
+
+elem.onclick = () =>{
+
+    animate({
+        duration: 1000,
+        timing: function bounce(timeFraction) {
+            for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+                if (timeFraction >= (7 - 4 * a) / 11) {
+                    return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                }
+            }
+        },
+
+        draw: function(progress) {
+
+            elem.style.width = progress * 100 + '%';
+
+        }
+    });
+};*/
+/*
+function makeEaseOut(timing) {
+    return function(timeFraction) {
+        return 1 - timing(1 - timeFraction);
+    }
+}
+
+function bounce(timeFraction) {
+    for (let a = 0, b = 1, result; 1; a += b, b /= 2) {
+        if (timeFraction >= (7 - 4 * a) / 11) {
+            return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+        }
+    }
+}
+
+let bounceEaseOut = makeEaseOut(bounce);
+
+brick.onclick = function() {
+    animate({
+        duration: 3000,
+        timing: bounceEaseOut,
+        draw: function(progress) {
+            brick.style.left = progress * 500 + 'px';
+        }
+    });
+};*/
+
+function delay(ms) {
+    return new Promise(function(resolve, reject) {
+        resolve(1);
+
+        setTimeout((ms) => resolve(2),ms);
+    });
+}
+
+delay(3000).then(() => alert('runs after 3 seconds'));

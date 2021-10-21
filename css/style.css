@@ -1,5 +1,5 @@
 /*Обнуление*/
-*,
+
 *:before,
 *:after {
 	padding: 0;
@@ -109,6 +109,7 @@ td {
 	width: 0;
 	height: 0;
 }*/
+/*
 .text {
 	font-size: 20px;
 	line-height: 200px;
@@ -122,4 +123,33 @@ td {
 	transform: translateX(-35%) translateY(-30%);
 	background-color: red;
 	border-radius: 50%;
+}*/
+/*
+.train {
+	position: relative;
+
+}*/
+/*
+progress {
+	width: 5%;
+	height: 40px;
+}
+*/
+
+#brick {
+	width: 75px;
+	height: 75px;
+
+	position: relative;
+	cursor: pointer;
+
+}
+
+#path {
+	position: relative;
+	top: 200px;
+
+	width: 540px;
+	height: 20px;
+	transform: rotate(90deg);
 }

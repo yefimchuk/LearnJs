@@ -5,8 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css">
 		<title>Массивы в JavaScript</title>
-		<script src="js/script.js"></script>
+
 		<script src="js/Clock.js"></script>
+		<script src="js/animate.js"></script>
+
 	</head>
 	<body>
 <!--	<a href="http://example.com/file.zip">...</a>
@@ -150,8 +152,36 @@
 
 <!--<div class="progress"></div>-->
 <!--<img class="img" src="https://en.js.cx/clipart/flyjet.jpg">-->
-<button class="button" onclick="go()">showCircle(150, 150, 100)</button>
-<div class="circle"></div>
+<!--<button class="button" onclick="go()">showCircle(150, 150, 100)</button>
+<div class="circle"></div>-->
+<!--
+<img class="train" src="https://js.cx/clipart/train.gif">
+
+
+<script>
+	train = document.querySelector(".train")
+	train.onclick = function() {
+		let start = Date.now();
+
+
+		let timer = setInterval(function() {
+
+			let timePassed = Date.now() - start;
+
+			train.style.left = timePassed / 5 + 'px';
+
+			if (timePassed > 2000) clearInterval(timer);
+
+		}, 20);
+	}-->
+
+<!--<div id="path">
+
+	<img src="https://en.js.cx/clipart/ball.svg" id="brick" >
+</div>-->
+
+
+<script src="js/script.js"></script>
 
 	</body>
 </html>
