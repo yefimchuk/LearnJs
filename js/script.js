@@ -475,3 +475,8 @@ new Promise(resolve => resolve(1))
         return new Thenable(result); // (*)
     })
     .then(console.log); // shows 2 after 1000ms
+new Promise(resolve => resolve(1))
+    .then(result => {
+        return new Thenable(result); // (*)
+    })
+    .then(console.log); // shows 2 after 1000ms
