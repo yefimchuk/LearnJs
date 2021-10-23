@@ -88,7 +88,7 @@ catch (err)
     console.log(err)
 }
 window.onerror = function(message, url, line, col, error) {
-    alert(`${message}\n At ${line}:${col} of ${url}`);
+    console.log(`${message}\n At ${line}:${col} of ${url}`);
 };
 
 function readData() {
@@ -115,7 +115,7 @@ console.log( err.stack ); // stack
 console.log( err instanceof SyntaxError ); // true*/
 
 /*function sayHi() {
-    alert("Hello");
+    console.log("Hello");
 }
 
 // global functions are methods of the global object:
@@ -164,7 +164,7 @@ console.log(coll)
 let inputs = table.getElementsByTagName('input');
 
 for (let input of inputs) {
-    alert( input.value + ': ' + input.checked );
+    console.log( input.value + ': ' + input.checked );
 }*/
 /*
 
@@ -416,12 +416,73 @@ brick.onclick = function() {
     });
 };*/
 
+/*
 function delay(ms) {
     return new Promise(function(resolve, reject) {
-        resolve(1);
 
         setTimeout((ms) => resolve(2),ms);
     });
 }
 
-jsadaadad
+delay(3000).then(() => console.log('runs after 3 seconds'));
+
+//===============================================
+
+
+function go() {
+    showCircle(150, 150, 100).then(div => {
+        div.classList.add('message-ball');
+        div.append("Hello, world!");
+    });
+}
+
+
+    function showCircle(cx, cy, radius, callback) {
+
+            let div = document.createElement('div');
+            div.style.width = 0;
+            div.style.height = 0;
+            div.style.left = cx + 'px';
+            div.style.top = cy + 'px';
+            div.className = 'circle';
+            document.body.append(div);
+            return new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                div.style.width = radius * 2 + 'px';
+                div.style.height = radius * 2 + 'px';
+
+                div.addEventListener('transitionend', function handler() {
+                    div.removeEventListener('transitionend', handler);
+                    resolve(div)
+                });
+            }, 0);
+
+        })
+}*/
+class Thenable {
+    constructor(num) {
+        this.num = num;
+    }
+    then(resolve, reject) {
+        console.log(resolve); // function() { native code }
+        // resolve with this.num*2 after the 1 second
+        setTimeout(() => resolve(this.num * 2), 1000); // (**)
+    }
+}
+
+new Promise(resolve => resolve(1))
+    .then(result => {
+        return new Thenable(result); // (*)
+    })
+    .then(console.log); // shows 2 after 1000ms
+new Promise(resolve => resolve(1))
+    .then(result => {
+        return new Thenable(result); // (*)
+    })
+    .then(console.log); // shows 2 after 1000ms
+new Promise(resolve => resolve(1))
+    .then(result => {
+        return new Thenable(result); // (*)
+    })
+    .then(console.log); // shows 2 after 1000ms
+decodeURI()
