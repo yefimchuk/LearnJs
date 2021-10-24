@@ -153,3 +153,16 @@ progress {
 	height: 20px;
 	transform: rotate(90deg);
 }
+.message-ball {
+	font-size: 20px;
+	line-height: 200px;
+	text-align: center;
+}
+.circle {
+	transition-property: width, height, margin-left, margin-top;
+	transition-duration: 2s;
+	position: fixed;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: red;
+	border-radius: 50%;
+}
