@@ -549,79 +549,43 @@ await new Promise(resolve => setTimeout(resolve, 1000));
 function f() {
 wait().then(result => console.log(result))
 }
-<<<<<<< HEAD:js/script.js
 f()
-=======
-f()*/
+*/
 /*
-let urls = [
-    'https://api.github.com/users/iliakan',
-    'https://api.github.com/users/remy',
-    'https://api.github.com/users/jeresig'
-];
+let promise = Promise.reject(new Error("Promise Failed!"));
+setTimeout(() => promise.catch(err => console.log('caught')), 1000);
 
-// map every url to the promise of the fetch
-debugger
-let requests = urls.map(url => fetch(url));
-console.log(requests)
-// Promise.all waits until all jobs are resolved
-Promise.all(requests)
-    .then(responses => responses.forEach(
-        response => console.log(`${response.url}: ${response.status}`)
-    ));*/
-/*
-
-let user = {
-    name: 'John',
-    surname: 'Smith'
-};
-
-let response = await fetch('/article/fetch/post/user', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json;charset=utf-8'
-    },
-    body: JSON.stringify(user)
-});
-
-let result = await response.json();
-alert(result.message);*/
+// Error: Promise Failed!
+window.addEventListener('unhandledrejection', event => console.log(event.reason
+))*/
 
 /*
-
-async function submit() {
-    let blob = await new Promise(resolve => canvasElem.toBlob(resolve, 'image/png'));
-    let response = await fetch('/article/fetch/post/image', {
-        method: 'POST',
-        body: blob
-    });*/
-let i = 0;
-
-async function getUsers(names) {
-    let jobs = [];
-
-    for(let name of names) {
-        let job = fetch(`https://api.github.com/users/${name}`)
-            .then(
-
-            successResponse => {
-                if (successResponse.status != 200) {
-                    return null;
-                } else {
-
-                    return successResponse.json();
-                }
-            },
-        );
-
-        jobs.push(job);
-        job.then(k => console.log(k.avatar_url))
-    }
-
-    let results = await Promise.all(jobs);
-console.log(results)
-    return results;
+function* generateSequence() {
+    yield 1;
+    yield 2;
+    return 3;
 }
 
-getUsers( ['iliakan', 'remy', 'yefimchuk']);
->>>>>>> Promise:js/script.ts
+let generator = generateSequence();
+
+let one = generator.next();
+
+let text =JSON.stringify(one) // {value: 1, done: false}
+console.log(JSON.parse(text))*/
+
+
+const data = [
+    ["Col1", "Col2","Col3"],
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+
+]
+let file = document.querySelector(".a")
+let bob = new Blob([makeTable(data)])
+function makeTable(rows){
+
+    return rows.map(r=> r.join(",")).join("\t")
+}
+file.href = URL.createObjectURL(bob)
+
