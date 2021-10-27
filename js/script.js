@@ -574,6 +574,7 @@ let text =JSON.stringify(one) // {value: 1, done: false}
 console.log(JSON.parse(text))*/
 
 
+/*
 const data = [
     ["Col1", "Col2","Col3"],
     [1,2,3],
@@ -589,3 +590,25 @@ function makeTable(rows){
 }
 file.href = URL.createObjectURL(bob)
 
+*/
+document.querySelector('#searcher').oninput = function () {
+    let val = this.value.trim()
+    let elem = document.querySelectorAll(".searcher2 li");
+    console.log(elem)
+    if (val != "") {
+            elem.forEach(function (elemm){
+                if (elemm.innerHTML.search(val) == -1){
+                    elemm.classList.add("hide")
+                }
+                else {
+                    elemm.classList.remove( "hide")
+                }
+            })
+
+    }
+    else {
+        elem.forEach(function (elemm){
+          elemm.classList.remove('hide')
+        })
+    }
+}

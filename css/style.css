@@ -166,3 +166,26 @@ progress {
 	background-color: red;
 	border-radius: 50%;
 }
+h1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.search
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+#searcher{
+	width: 500px;
+}
+li{
+	font-size: 25px;
+	padding: 6px;
+}
+.searcher2 li.hide{
+	display: none;
+}
