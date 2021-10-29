@@ -1,4 +1,5 @@
 /*
+/!*
 
 class PowerArray extends Array {
     isEmpty() {
@@ -11,9 +12,9 @@ console.log(arr.isEmpty()); // false
 
 let filteredArr = arr.filter(item => item >= 10);
 console.log(Symbol.species); // 10, 50
-console.log(filteredArr.isEmpty()); // fal*/
+console.log(filteredArr.isEmpty()); // fal*!/
 
-/*
+/!*
 class Mammal {
     constructor(name) {
         this.name = name;
@@ -46,14 +47,14 @@ cat.walk(); // kitty walks
 cat.eat(); // kitty eats
 // Static method of parent class - Error!!
 cat.sleep(); // Error : not a function
-*/
-/*
+*!/
+/!*
 let obj = {
 
 }
-console.log(obj)*/
+console.log(obj)*!/
 
-/*
+/!*
 class Rabbit {}
 class Rabbit2 {}
 let rabbit = new Rabbit();
@@ -61,9 +62,9 @@ let rabbit2 = new Rabbit2();
 
 // is it an object of Rabbit class?
 console.log( rabbit instanceof Rabbit2 ); // true
-*/
+*!/
 
-/*
+/!*
 class Rabbit{}
 
 //a
@@ -76,10 +77,10 @@ Object.prototype.toString.call(new Rabbit())// "[object Object]"
 var s = {}.toString;
 s.call(new Rabbit())//"[object Object]"
 //d
-console.log(Object.prototype.toString.call(new Rabbit()) === {}.toString.call(new Rabbit())) // returns true*/
+console.log(Object.prototype.toString.call(new Rabbit()) === {}.toString.call(new Rabbit())) // returns true*!/
 
 
-/*
+/!*
 try{
     s.call(new Rabbit())//"[object Object]"
 }
@@ -96,9 +97,9 @@ function readData() {
 }
 
 readData();
-*/
+*!/
 
-/*
+/!*
 class FormatError extends SyntaxError {
     constructor(message) {
         super(message);
@@ -112,15 +113,15 @@ console.log( err.message ); // ошибка форматирования
 console.log( err.name ); // FormatError
 console.log( err.stack ); // stack
 
-console.log( err instanceof SyntaxError ); // true*/
+console.log( err instanceof SyntaxError ); // true*!/
 
-/*function sayHi() {
+/!*function sayHi() {
     console.log("Hello");
 }
 
 // global functions are methods of the global object:
-window.sayHi();*/
-/*
+window.sayHi();*!/
+/!*
 
 setTimeout(() =>  document.body.style.background = "red", 1000)
 {
@@ -131,8 +132,8 @@ setTimeout(() =>  document.body.style.background = "red", 1000)
     document.body.style.background = "green"
 
 }
-*/
-/*
+*!/
+/!*
 const draw = (table, color) => {
     const count = table.rows.length
     const trows = table.rows
@@ -142,13 +143,13 @@ const draw = (table, color) => {
     }
 }
 
-draw(document.body.firstElementChild, 'red')*/
-/*for (let elem of document.body.children) {
+draw(document.body.firstElementChild, 'red')*!/
+/!*for (let elem of document.body.children) {
     if (elem.matches('a[href$="file.zip"]')) {
         console.log("The archive reference: " + elem.href);
     }
-}*/
-/*
+}*!/
+/!*
 let coll = document.querySelectorAll("div");
 for (let i = 0, len = coll.length; i < len; i++) {
     if (coll[i].matches(".someClass")) {
@@ -158,58 +159,58 @@ for (let i = 0, len = coll.length; i < len; i++) {
     }
 }
 console.log(coll)
-*/
-/*
+*!/
+/!*
 
 let inputs = table.getElementsByTagName('input');
 
 for (let input of inputs) {
     console.log( input.value + ': ' + input.checked );
-}*/
-/*
+}*!/
+/!*
 
 let tav = document.querySelectorAll('#age-table label')
 
 for (let elem of tav) {
     console.log(elem.innerHTML); // "test", "passed"
-}*/
+}*!/
 
-/*
+/!*
 
 let div = document.createElement("div")
 let p = document.createElement("pipi")
 div.append(p)
 
-console.log(div.childNodes)*/
+console.log(div.childNodes)*!/
 
-/*
+/!*
 let i = document.querySelector('.bebra')
 console.log(i.innerHTML)
 
-console.log(i.innerHTML = "Hi, Ben")*//*
+console.log(i.innerHTML = "Hi, Ben")*!//!*
 function add (a)
 {
     return function (b)
     {
         return a + b
     }
-}*/
-/* new Promise((resolve, reject) => {
+}*!/
+/!* new Promise((resolve, reject) => {
  setTimeout(() => reject("hello"), 2000)
-})*/
+})*!/
 
-/*.then(error => console.log(error),*/
-/*
-    result => console.log(result)); */
+/!*.then(error => console.log(error),*!/
+/!*
+    result => console.log(result)); *!/
 
-/*
+/!*
 function delay(ms) {
     return new Promise (resolve => setTimeout(resolve,ms) )
 }
 delay(3000).then(() => console.log('runs after 3 seconds'));
- */
+ *!/
 
-/*
+/!*
 console.log("Request data...")
 let p = new Promise((resolve, reject) => {
     setTimeout(()=>{
@@ -232,9 +233,9 @@ p.then(newStud => {
         }, 6000)
         resolve(newStud)
     })
-}).then((mod) => console.log(mod))*/
+}).then((mod) => console.log(mod))*!/
 
-/*
+/!*
 let img = document.querySelector('.img');
 img.addEventListener("click", addClass )
 
@@ -260,8 +261,8 @@ function addAlert(){
 console.log("Done")
     img.removeEventListener("transitionend", addAlert)
 
-}*/
-/*
+}*!/
+/!*
 
 let button = document.createElement("BUTTON");
 button.innerText = "showCircle(150, 150, 100)"
@@ -294,9 +295,9 @@ wight.style.width = `${cx}px`;
     height.style.height = `${cy}px`;
     radiusCircle.style.borderRadius = `${radius}px`;
 }
-*/
+*!/
 
-/*
+/!*
 let circle = document.querySelector(".circle")
 let button = document.querySelector(".button")
 button.addEventListener("click", clickHandler)
@@ -309,9 +310,9 @@ function showCircle(cx, cy, radius) {
     circle.style.top = cy + "px"
     circle.style.width = radius * 2 + "px"
     circle.style.height = radius * 2 + "px"
-}*/
+}*!/
 
-/*
+/!*
 function go() {
     showCircle(150, 150, 100, div => {
         div.classList.add('text');
@@ -338,8 +339,8 @@ function showCircle(cx, cy, radius, callback) {
         });
     }, 0);
 }
-*/
-/*
+*!/
+/!*
 let start = Date.now(); // remember start time
 let timer = setInterval(()=> {
     let timePassed = Date.now() - start;
@@ -349,13 +350,13 @@ let timer = setInterval(()=> {
         clearInterval(timer)
     }
     }
-,2000)*/
-/*
+,2000)*!/
+/!*
 let prev = performance.now();
 console.log(prev)
-setInterval(()=> console.log(performance.now()), 10000)*/
+setInterval(()=> console.log(performance.now()), 10000)*!/
 
-/*
+/!*
 let prev = performance.now();
 let times = 0;
 
@@ -364,11 +365,11 @@ requestAnimationFrame(function measureddd(faf) {
 
     if (times++ < 10) requestAnimationFrame(measure);
 })
-*/
-/*let path = document.querySelector("#path")
+*!/
+/!*let path = document.querySelector("#path")
 
-let brick = document.querySelector("#brick")*/
-/*
+let brick = document.querySelector("#brick")*!/
+/!*
 
 elem.onclick = () =>{
 
@@ -388,8 +389,8 @@ elem.onclick = () =>{
 
         }
     });
-};*/
-/*
+};*!/
+/!*
 function makeEaseOut(timing) {
     return function(timeFraction) {
         return 1 - timing(1 - timeFraction);
@@ -414,9 +415,9 @@ brick.onclick = function() {
             brick.style.left = progress * 500 + 'px';
         }
     });
-};*/
+};*!/
 
-/*
+/!*
 function delay(ms) {
     return new Promise(function(resolve, reject) {
 
@@ -458,9 +459,9 @@ function go() {
             }, 0);
 
         })
-}*/
+}*!/
 
-/*
+/!*
 >>>>>>> Promise
 class Thenable {
     constructor(num) {
@@ -491,9 +492,9 @@ new Promise(resolve => resolve(1))
 <<<<<<< HEAD
 decodeURI()
 =======
-decodeURI()*/
+decodeURI()*!/
 
-/*
+/!*
 class HttpError extends Error {
     constructor(response) {
         super(`${response.status} for ${response.url}`);
@@ -550,16 +551,16 @@ function f() {
 wait().then(result => console.log(result))
 }
 f()
-*/
-/*
+*!/
+/!*
 let promise = Promise.reject(new Error("Promise Failed!"));
 setTimeout(() => promise.catch(err => console.log('caught')), 1000);
 
 // Error: Promise Failed!
 window.addEventListener('unhandledrejection', event => console.log(event.reason
-))*/
+))*!/
 
-/*
+/!*
 function* generateSequence() {
     yield 1;
     yield 2;
@@ -571,10 +572,10 @@ let generator = generateSequence();
 let one = generator.next();
 
 let text =JSON.stringify(one) // {value: 1, done: false}
-console.log(JSON.parse(text))*/
+console.log(JSON.parse(text))*!/
 
 
-/*
+/!*
 const data = [
     ["Col1", "Col2","Col3"],
     [1,2,3],
@@ -590,16 +591,21 @@ function makeTable(rows){
 }
 file.href = URL.createObjectURL(bob)
 
-*/
+*!/
+
 document.querySelector('#searcher').oninput = function () {
     let val = this.value.trim()
     let elem = document.querySelectorAll(".searcher2 li");
     console.log(elem)
     if (val != "") {
             elem.forEach(function (elemm){
-                if (elemm.innerHTML.search(val) == -1){
-                    elemm.classList.add("hide")
+
+                if (elemm.innerHTML.toLowerCase().indexOf(val.toLowerCase()) === -1) {
+
+                        elemm.classList.add("hide")
+
                 }
+
                 else {
                     elemm.classList.remove( "hide")
                 }
@@ -612,3 +618,5 @@ document.querySelector('#searcher').oninput = function () {
         })
     }
 }
+
+*/

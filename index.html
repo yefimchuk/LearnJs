@@ -1,229 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/style.css">
-		<title>Массивы в JavaScript</title>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-		<script src="js/Clock.js"></script>
-		<script src="js/animate.js"></script>
+	<title>Hello, world!</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Navbar</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Features</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		</ul>
+	</div>
+</nav>
 
-	</head>
-	<body>
-<!--	<a href="http://example.com/file.zip">...</a>
-	<a href="http://ya.ru">...</a>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Navbar</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Features</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Dropdown link
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
 
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
-<div id="one">Первый подопытный</div>
-<div class="someClass" id="two">Второй подопытный</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 -->
-
-	<!--
-            <h1>I return my <span class="yellow">150 grn, fucking robbers... </span></h1>
-            <h3>1. Monobank</h3>
-            <h3>2. New telegram</h3>
-            <h3>3. Text </h3>g
-            <h3>4. Money, near 50 grn </h3>
-            <button class="A-1"> Yes</button>
-            <button class="A-2"> Yes</button>
-    -->
-
-<!--		<!DOCTYPE HTML>-->
-		<!--<html>
-		<head>
-			<style>
-				table {
-					border-collapse: collapse;
-				}
-
-				td {
-					border: 1px solid black;
-					padding: 3px 5px;
-				}
-			</style>
-		</head>
-
-		<body>
-		<table>
-			<tr>
-				<td>1:1</td>
-				<td>2:1</td>
-				<td>3:1</td>
-				<td>4:1</td>
-				<td>5:1</td>
-
-			</tr>
-			<tr>
-				<td>1:2</td>
-				<td>2:2</td>
-				<td>3:2</td>
-				<td>4:2</td>
-				<td>5:2</td>
-			</tr>
-			tr td {background: black}
-			<tr>
-				<td>1:3</td>
-				<td>2:3</td>
-				<td>3:3</td>
-				<td>4:3</td>
-				<td>5:3</td>
-			</tr>
-			<tr>
-				<td>1:4</td>
-				<td>2:4</td>
-				<td>3:4</td>
-				<td>4:4</td>
-				<td>5:4</td>
-			</tr>
-			<tr>
-				<td>1:5</td>
-				<td>2:5</td>
-				<td>3:5</td>
-				<td>4:5</td>
-				<td>5:5</td>
-			</tr>
-		</table>
-		<script>
-			let table = document.body.firstElementChild;
-			for (let i = 0;i < table.children[0].children.length; i++) {
-				let td = table.rows[i].cells[table.rows[i].cells.length - i - 1]
-				td.style.backgroundColor = 'red';
-			}
-		</script>
-		</body>
-		</html>-->
-<!--<tr>
-	<td>Your age:</td>
-
-	<td>
-
-		<label>
-			<input type="radio" name="age" value="young" checked> less than 18
-		</label>
-		<label>
-			<input type="radio" name="age" value="mature"> from 18 to 50
-		</label>
-		<label>
-			<input type="radio" name="age" value="senior"> more than 60
-		</label>
-
-	</td>
-</tr>-->
-
-<!--<form name="search">
-	<label>Search the site:
-		<input type="text" name="search">
-	</label>
-	<input type="submit" value="Search!">
-</form>
-
-<hr>
-
-<form name="search-person">
-	Search the visitors:
-	<table id="age-table">
-		<tr>
-			<td>Age:</td>
-			<td id="age-list">
-				<label>
-					<input type="radio" name="age" value="young">less than 18</label>
-				<label>
-					<input type="radio" name="age" value="mature">18-50</label>
-				<label>
-					<input type="radio" name="age" value="senior">more than 50</label>
-			</td>
-		</tr>
-
-		<tr>
-			<td>Additionally:</td>
-			<td>
-				<input type="text" name="info[0]">
-				<input type="text" name="info[1]">
-				<input type="text" name="info[2]">
-			</td>
-		</tr>
-
-	</table>
-
-	<input type="submit" value="Search!">
-</form>-->
-<!--<div class="bebra"> Hello world</div>-->
-
-<!--<div class="progress"></div>-->
-<!--<img class="img" src="https://en.js.cx/clipart/flyjet.jpg">-->
-<!--<button class="button" onclick="go()">showCircle(150, 150, 100)</button>
-<div class="circle"></div>-->
-<!--
-<img class="train" src="https://js.cx/clipart/train.gif">
-
-
-<script>
-	train = document.querySelector(".train")
-	train.onclick = function() {
-		let start = Date.now();
-
-
-		let timer = setInterval(function() {
-
-			let timePassed = Date.now() - start;
-
-			train.style.left = timePassed / 5 + 'px';
-
-			if (timePassed > 2000) clearInterval(timer);
-
-		}, 20);
-	}-->
-
-<!--<div id="path">
-
-	<img src="https://en.js.cx/clipart/ball.svg" id="brick" >
-</div>-->
-
-<!--<button onclick="go()">Click me</button>-->
-<!--<div>Download GTA VI</div>
-<a class="a" download="helloGTAVI.txt">download</a>
-<input type="file">-->
-<div class="search">
-	<h1>Searcher names</h1>
-	<input type="text" id="searcher">
-	<ul class="searcher2">
-		<li>БЕМА Вадим Олегович</li>
-		<li>БІДЗЮРА Максим Максимович</li>
-		<li>БОНДАРЕНКО Богдан Сергійович</li>
-		<li>ВАЩУК Олександр Олегович</li>
-		<li>ВЛАСЕНКО Олексій Миколайович</li>
-		<li>ГІРШЕВ Вячеслав Миколайович</li>
-		<li>ДЕМЕНСЬКИЙ Артур Максимович</li>
-		<li>ДРОЗД Дар`я Геннадіївна</li>
-		<li>ЄФІМЧУК Дмитро Сергійович</li>
-		<li>ІВАШКО Віталій Сергійович</li>
-		<li>КАРПЕНКО Анатолій Віталійович</li>
-		<li>КАРЧЕВСЬКИЙ Данило Олександрович</li>
-		<li>КОЖЕВНІКОВ Ілля Богданович</li>
-		<li>КОЦУР Ірина Олегівна</li>
-		<li>КРЯЧКО Олексій Юрійович</li>
-		<li>МІЦУРА Єгор Ігорович</li>
-		<li>МОЛОДОЖЕНЯ Назар Юрійович</li>
-		<li>НЕЧАЄВ Нікіта Андрійович</li>
-		<li>ПАЛАМАРЧУК Максим Олегович</li>
-		<li>ПШЕНИЧНА Валентина Фіязівна</li>
-		<li>РАЗНО Олег Сергійович</li>
-		<li>РИБАК Іван Андрійович</li>
-		<li>СИДОРЕНКО Владислав Владиславович</li>
-		<li>СИНИЦЯ Євгеній Сергійович</li>
-		<li>СКЛЯРЕНКО Валерія Костянтинівна</li>
-		<li>СОТНИК Владислав Сергійович</li>
-		<li>СЯСЬКИЙ Ілля Вікторович</li>
-		<li>ЧЕРНЕНЬКИЙ Микола Михайлович</li>
-		<li>ШИМОН Владислав Сергійович</li>
-		<li>ЯКОВЕНКО Ярослав Олегович</li>
-
-
-	</ul>
-</div>
-
-<script src="js/script.js"></script>
-
-	</body>
+</body>
 </html>

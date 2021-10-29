@@ -1,5 +1,6 @@
 /*Обнуление*/
 
+/*
 *:before,
 *:after {
 	padding: 0;
@@ -17,6 +18,7 @@ body {
 	font-size: 16px;
 	padding: 30px;
 }
+*/
 
 /*
 h1 {
@@ -136,6 +138,7 @@ progress {
 }
 */
 
+/*
 #brick {
 	width: 75px;
 	height: 75px;
@@ -188,4 +191,4 @@ li{
 }
 .searcher2 li.hide{
 	display: none;
-}
+}*/
